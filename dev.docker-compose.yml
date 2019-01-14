@@ -20,16 +20,34 @@ services:
       - DB_NAME=db
       - RUNNING_ENV=dev
       - MARABUNTA_MODE=demo
-      - VIRTUAL_HOST=shopinvader-docky.dy
+      - VIRTUAL_HOST=odoo-shop.dy
       - VIRTUAL_PORT=8069
-      - DEMO=True
+      - DEMO=False
+      - WORKERS=4
+      - ADDONS_PATH=/odoo/links,/odoo/local-src,/odoo/src/odoo/addons,/odoo/src/addons,/odoo/external-src/bank-payment,/odoo/external-src/crm,/odoo/external-src/delivery-carrier,/odoo/external-src/e-commerce,/odoo/external-src/product-brand,/odoo/external-src/product-variant,/odoo/external-src/queue,/odoo/external-src/sale-workflow,/odoo/external-src/ak-odoo-incubator,/odoo/external-src/connector-search-engine,/odoo/external-src/odoo-shopinvader,/odoo/external-src/rest-framework,/odoo/external-src/payment-gateway,/odoo/external-src/server-tools,/odoo/external-src/storage,external-src/connector,/odoo/external-src/shopinvader
+    links:
+      - db
+      - pgadmin
+    networks:
+      default:
+        aliases:
+          - odoo-shop.dy
+    volumes:
+      - ./odoo:/odoo
+      - ./data/addons:/data/odoo/addons
+      - ./data/filestore:/data/odoo/filestore
+      - ./data/sessions:/data/odoo/sessions
+  pgadmin:
+    environment:
+      - DEFAULT_USER=admin
+      - DEFAULT_PASSWORD=admin
+      - VIRTUAL_HOST=pgadmin.odoo-shop.dy
+      - VIRTUAL_PORT=5050
+    image: fenglc/pgadmin4
     links:
       - db
     networks:
       default:
         aliases:
-          - shopinvader-docky.dy
-    volumes:
-      - ./odoo:/odoo
-      - ./data:/data
+          - pgadmin.odoo-shop.dy
 version: '3'

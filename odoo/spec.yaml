@@ -69,3 +69,7 @@ storage:
 connector:
     modules: []
     src: https://github.com/oca/connector 10.0
+
+shopinvader:
+    modules: []
+    src: https://github.com/akretion/odoo-shopinvader.git 10.0
