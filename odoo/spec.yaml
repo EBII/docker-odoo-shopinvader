@@ -73,3 +73,7 @@ connector:
 shopinvader:
     modules: []
     src: https://github.com/akretion/odoo-shopinvader.git 10.0
+
+account-reconcile:
+    modules: []
+    src: https://github.com/OCA/account-reconcile.git 10.0
