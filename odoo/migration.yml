@@ -2,7 +2,7 @@ migration:
   options:
     install_command: odoo
   versions:
-    - version: 2018.06.30
+    - version: setup
       addons:
         upgrade:
           - shopinvader_payment_stripe
