@@ -24,7 +24,7 @@ services:
       - VIRTUAL_PORT=8069
       - DEMO=False
       - WORKERS=4
-      - ADDONS_PATH=/odoo/links,/odoo/local-src,/odoo/src/odoo/addons,/odoo/src/addons,/odoo/external-src/bank-payment,/odoo/external-src/crm,/odoo/external-src/delivery-carrier,/odoo/external-src/e-commerce,/odoo/external-src/product-brand,/odoo/external-src/product-variant,/odoo/external-src/queue,/odoo/external-src/sale-workflow,/odoo/external-src/ak-odoo-incubator,/odoo/external-src/connector-search-engine,/odoo/external-src/odoo-shopinvader,/odoo/external-src/rest-framework,/odoo/external-src/payment-gateway,/odoo/external-src/server-tools,/odoo/external-src/storage,external-src/connector,/odoo/external-src/shopinvader
+      - ADDONS_PATH=/odoo/links,/odoo/local-src,/odoo/src/odoo/addons,/odoo/src/addons,/odoo/external-src/bank-payment,/odoo/external-src/crm,/odoo/external-src/delivery-carrier,/odoo/external-src/e-commerce,/odoo/external-src/product-brand,/odoo/external-src/product-variant,/odoo/external-src/queue,/odoo/external-src/sale-workflow,/odoo/external-src/ak-odoo-incubator,/odoo/external-src/connector-search-engine,/odoo/external-src/odoo-shopinvader,/odoo/external-src/rest-framework,/odoo/external-src/payment-gateway,/odoo/external-src/server-tools,/odoo/external-src/storage,/odoo/external-src/connector,/odoo/external-src/shopinvader
     links:
       - db
       - pgadmin
